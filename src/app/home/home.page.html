@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>LexiVote</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Welcome to LexiVote!</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Select where do you want to start:</ion-label>
+        </ion-list-header>
+
+        <ion-item (click)="redirectWhyVote()">
+          <ion-icon slot="start" color="black" name="logo-yahoo"></ion-icon>
+          <ion-label>Why should I vote?</ion-label>
+        </ion-item>
+
+        <ion-item (click)="redirectExploreOptions()">
+          <ion-icon slot="start" color="black" name="today"></ion-icon>
+          <ion-label>Explore Options</ion-label>
+        </ion-item>
+
+        <ion-item (click)="redirectWhereVote()">
+          <ion-icon slot="start" color="black" name="pin"></ion-icon>
+          <ion-label>Where do I vote?</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
