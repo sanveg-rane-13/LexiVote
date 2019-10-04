@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { SliderService } from '../providers/slider.service'
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  items = [];
+  sliderConfig = {
+    slidesPerView: 1.6,
+    spaceBetween: 10,
+    centeredSlides: true
+  };
 
+  constructor(private router: Router, private sliderService: SliderService) { }
+
+  ngOnInit() {
+    this.items = this.sliderService.getItems();
+  }
 }
